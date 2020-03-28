@@ -1,0 +1,70 @@
+/* game board table */
+#board{
+  margin: auto;
+  border: 31px #fbd005 solid;
+  border-radius: 20px;
+  background: #fbf4ce;
+}
+
+#board td {
+  width: 50px;
+  background: lightyellow;
+  height: 50px;
+  border: solid 1px #666;
+}
+
+#column-top td{
+  background: white;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+  /* css to make piece into a circle */
+  margin: 5px;
+  border-radius: 25px;
+  width: 80%;
+  height: 80%;
+  position: relative;
+}
+
+/* make pieces red/blue,  depending on player 1/2 piece */
+
+.player-one {
+  background-color: royalblue;
+  animation:mychip 1.5s;
+  -moz-animation:mychip 1.5s; /* Firefox */
+  -webkit-animation:mychip s; /* Safari and Chrome */   
+}
+
+.player-two {
+  background-color: red;
+  animation:mychip 1.5s;
+  -moz-animation:mychip 1.5s; /* Firefox */
+  -webkit-animation:mychip 1.5s; /* Safari and Chrome */       
+}
+
+
+
+@keyframes mychip{
+  from {top: -333px;} 
+  to{top:0px;} 
+}
+@-moz-keyframes mychip{
+  from {top: -333px;} 
+  to{top:0px;} 
+}
+@-webkit-keyframes mychip{
+  from {top: -333px;} 
+  to{top:0px;} 
+}​
+
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border: dashed 1px lightgray;
+}
+
+#column-top td:hover {
+  background-color: gold;
+}
